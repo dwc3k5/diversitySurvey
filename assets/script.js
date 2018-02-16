@@ -3,10 +3,49 @@ console.log("javascript connected!");
 
 var survey ={
   major: "undefined",
-  type: "undefined"
+  type: "undefined",
+  business:{
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
+  },
+  education:{
+    instructor:{
 
+    },
+    student:{
+
+    }
+  },
+  compSci:{
+    instructor:{
+
+    },
+    student:{
+
+    }
+  },
+  english:{
+    instructor:{
+
+    },
+    student:{
+
+    }
+  },
+  engineering:{
+    instructor:{
+
+    },
+    student:{
+
+    }
+  }
 }
 
+var question = {
+  studentcompSci:[],
+  instructorcompSci:[]
+}
 
 
 // STOLEN for dropdown
@@ -31,21 +70,33 @@ window.onclick = function(event) {
 /*==============================================================================
 functions trigger questions to appear based on whether person is a student or instructor and subject area
 ================================================================================*/
+$(document).on("click", ".subject", function(){
+  console.log("you selected");
+  $(".dropbtn").text(this.text);
+  survey.major = this.id;
+  console.log(survey.major);
+});
+
 $(document).on("click", "#student", function(){
   console.log("you are a student");
-  student();
+  if( survey.major !== "undefined"){
+    survey.type = "student";
+    console.log(survey);
+    student();
+  }else{
+    console.log("you must choose a major");
+  }
 });
 
 $(document).on("click", "#instructor", function(){
   console.log("you are an instructor");
-  instructor();
-});
-
-$(document).on("click", ".subject", function(){
-  console.log("you selected");
-  $(".dropbtn").text(this.text);
-  survey.major = this.text;
-  console.log(survey.major);
+  if( survey.major !== "undefined"){
+    survey.type = "instructor";
+    console.log(survey);
+    instructor();
+  }else{
+    console.log("you must choose a major");
+  }
 });
 
 $(document).on("click", "#submit", function(event){
