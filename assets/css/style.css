@@ -2,7 +2,7 @@
 generic styling
 ===============================================================================*/
 body{
-  background-image: url("../images/background2.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
 }
 button{
@@ -15,10 +15,22 @@ button{
   cursor: pointer;
 }
 #navbar{
-  height: 50px;
+  font-family: "Times Body Copy", Times, serif;
+  color: white;
+  font-size: 30px;
+  padding: 10px 0 10px 20px;
+  height: 60px;
   margin: 3% 0;
   widows: 100%;
-  background-color: rgb(255, 250, 244);
+  background-color: rgb(193, 89, 0);
+}
+#logo{
+  height: 40px;
+  display: inline;
+}
+#header{
+  display: inline;
+  margin: 10px 0 0 20px;
 }
 .displayNone{
   display: none;
