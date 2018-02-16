@@ -2,7 +2,17 @@
 generic styling
 ===============================================================================*/
 body{
-  background-color: rgb(249, 197, 124);
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+}
+button{
+  background-image: url("../images/button-background.jpg");
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #navbar{
   height: 50px;
@@ -17,10 +27,8 @@ body{
   display:inline-block;
 }
 
-
 /*stuff for dropdown buttons===================================================*/
 .dropbtn {
-    background-color: #3498DB;
     color: white;
     padding: 16px;
     font-size: 16px;
