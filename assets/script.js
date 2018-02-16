@@ -1,9 +1,15 @@
 //testing connection in console log
 console.log("javascript connected!");
 
+var survey ={
+  major: "undefined",
+  type: "undefined"
+
+}
 
 
-// STOLEN'
+
+// STOLEN for dropdown
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -22,9 +28,9 @@ window.onclick = function(event) {
     }
   }
 }
-/*
-functions trigger questions to appear based on whether person is a student or instructor
-*/
+/*==============================================================================
+functions trigger questions to appear based on whether person is a student or instructor and subject area
+================================================================================*/
 $(document).on("click", "#student", function(){
   console.log("you are a student");
   student();
@@ -33,6 +39,13 @@ $(document).on("click", "#student", function(){
 $(document).on("click", "#instructor", function(){
   console.log("you are an instructor");
   instructor();
+});
+
+$(document).on("click", ".subject", function(){
+  console.log("you selected");
+  $(".dropbtn").text(this.text);
+  survey.major = this.text;
+  console.log(survey.major);
 });
 
 $(document).on("click", "#submit", function(event){
