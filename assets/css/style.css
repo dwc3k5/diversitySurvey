@@ -30,7 +30,13 @@ button{
   border-top: 3px solid rgb(255, 145, 53);
   border-bottom: 3px solid rgb(136, 62, 0);
 }
-
+#admin-link{
+  font-size: 20px;
+  color: #999;
+  float: right;
+  margin: 8px 20px 0 0;
+  cursor: pointer;
+}
 #logo{
   height: 37px;
   display: inline;
