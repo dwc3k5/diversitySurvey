@@ -1,44 +1,29 @@
 //testing connection in console log
 console.log("javascript connected!");
 
+var major;
+var type;
+var size;
 var survey ={
-  major: "undefined",
-  type: "undefined",
   business:{
-    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    instructor:["If you could change anything about the class, would you?", "Did your classroom experience cover a well rounded D&I topics and conversations?", "What topics related to diversity and inclusion were discussed?", "How did you feel about the coverage of diversity and inclusion in this class?", "How much were you exposed to content created by or research done by underrepresented groups?"],
     student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   education:{
-    instructor:{
-
-    },
-    student:{
-
-    }
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   compSci:{
-    instructor:{
-
-    },
-    student:{
-
-    }
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   english:{
-    instructor:{
-
-    },
-    student:{
-
-    }
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    student:["How diverse was the represntation of literature in your program?", "How strongly did the literature challenge your world view?", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   engineering:{
-    instructor:{
-
-    },
-    student:{
-
-    }
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    student:["What is your name?", "What is your quest?", "What is your favorite Color?", "Why've you got the coconuts?", "What is the air speed velocity of a swallow?"]
   }
 }
 
@@ -73,14 +58,14 @@ functions trigger questions to appear based on whether person is a student or in
 $(document).on("click", ".subject", function(){
   console.log("you selected");
   $(".dropbtn").text(this.text);
-  survey.major = this.id;
-  console.log(survey.major);
+  major = this.id;
+  console.log(major);
 });
 
 $(document).on("click", "#student", function(){
   console.log("you are a student");
-  if( survey.major !== "undefined"){
-    survey.type = "student";
+  if(major !== "undefined"){
+    type = "student";
     console.log(survey);
     student();
   }else{
@@ -90,8 +75,8 @@ $(document).on("click", "#student", function(){
 
 $(document).on("click", "#instructor", function(){
   console.log("you are an instructor");
-  if( survey.major !== "undefined"){
-    survey.type = "instructor";
+  if(major !== "undefined"){
+    type = "instructor";
     console.log(survey);
     instructor();
   }else{
@@ -111,12 +96,23 @@ function student(){
   console.log("clicked");
   $("#homeSection").attr("class", "displayNone");
   $("#questionSection").attr("class", "display");
+  $(".one").text(survey[major][type][0]);
+  $(".two").text(survey[major][type][1]);
+  $(".three").text(survey[major][type][2]);
+  $(".four").text(survey[major][type][3]);
+  $(".five").text(survey[major][type][4]);
+
 }
 
 function instructor(){
   console.log("clicked");
   $("#homeSection").attr("class", "displayNone");
   $("#questionSection").attr("class", "display");
+  $(".one").text(survey[major][type][0]);
+  $(".two").text(survey[major][type][1]);
+  $(".three").text(survey[major][type][2]);
+  $(".four").text(survey[major][type][3]);
+  $(".five").text(survey[major][type][4]);
 }
 
 function submitted(event){
