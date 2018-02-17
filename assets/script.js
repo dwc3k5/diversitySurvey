@@ -51,10 +51,9 @@ window.onclick = function(event) {
 functions trigger questions to appear based on whether person is a student or instructor and subject area
 ================================================================================*/
 $(document).on("click", ".subject", function(){
-  console.log("you selected");
   $(".dropbtn").text(this.text);
   major = this.id;
-  console.log(major);
+  this.html(major);
 });
 
 $(document).on("click", "#student", function(){
@@ -94,7 +93,8 @@ function student(){
   // $("#questionSection").attr("class", "display");
   $("#homeSection").attr("class", "animated fadeOut");
   setTimeout(function(){
-    $("#questionSection").attr("class", "animated fadeIn");
+    //$("#questionSection").attr("class", "animated fadeIn");
+    $("#questionSection").attr("class", "show");
     $("#homeSection").attr("class", "displayNone");
   },1000);
   $(".one").text(survey[major][type][0]);

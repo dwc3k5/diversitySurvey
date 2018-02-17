@@ -18,13 +18,6 @@ button{
   border-radius: 5px;
   cursor: pointer;
 }
-.home-question{
-  margin: auto;
-  font-family: "Helvetica", Times, serif;
-  font-size: 40px;
-  color: white;
-  text-shadow: 2px 2px black;
-}
 #navbar{
   font-family: "Times Body Copy", Times, serif;
   color: white;
@@ -37,6 +30,7 @@ button{
   border-top: 3px solid rgb(255, 145, 53);
   border-bottom: 3px solid rgb(136, 62, 0);
 }
+
 #logo{
   height: 37px;
   display: inline;
@@ -44,6 +38,13 @@ button{
 #header{
   display: inline;
   margin: 10px 0 0 20px;
+}
+.home-question{
+  margin: auto;
+  font-family: "Helvetica", Times, serif;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 .displayNone{
   display: none;
@@ -101,26 +102,6 @@ button{
 .dropdown a:hover {background-color: #ddd}
 
 .show {display:block;}
-/*=============================================================================*/
-/*==============================================================================
-navbar
-===============================================================================*/
-#logo{
-
-}
-/*==============================================================================
-style for entry of page
-===============================================================================*/
-#homeSection{
-
-}
-
-/*==============================================================================
-style for questionnaire
-===============================================================================*/
-#questionSection{
-
-}
 
 .question{
   color: white;
@@ -135,6 +116,7 @@ style for post-submission
 
 #thanks{
   margin: auto;
+  margin-top: 50px;
   color: white;
   text-shadow: 4px 4px black;
   font-size: 60px;
