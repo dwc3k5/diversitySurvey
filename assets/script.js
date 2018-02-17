@@ -27,11 +27,6 @@ var survey ={
   }
 }
 
-var question = {
-  studentcompSci:[],
-  instructorcompSci:[]
-}
-
 
 // STOLEN for dropdown
 function myFunction() {
