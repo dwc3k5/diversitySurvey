@@ -7,7 +7,14 @@ var size;
 var survey ={
   business:{
     instructor:["If you could change anything about the class, would you?", "Did your classroom experience cover a well rounded D&I topics and conversations?", "What topics related to diversity and inclusion were discussed?", "How did you feel about the coverage of diversity and inclusion in this class?", "How much were you exposed to content created by or research done by underrepresented groups?"],
-    student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
+    student:[   
+    "If you could change anything about the class, would you?",
+    "Our classroom experience covered D&I topics and conversations?",
+    "Topics related to diversity and inclusion were discussed in your class?",
+    "How did you feel about the coverage of diversity and inclusion in this class?",
+    "You were exposed to a significant amount of content created by or research done by underrepresented groups?"
+     ]
+
   },
   education:{
     instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "What cultural lenses did you challenge your students to look through?"],
