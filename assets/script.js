@@ -10,15 +10,15 @@ var survey ={
     student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   education:{
-    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
-    student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
+    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "What cultural lenses did you challenge your students to look through?"],
+    student:["How prepared do you feel to teach in highly diverse environments?", "How challenged were you to consider different cultural perspectives of your students?", "sQuestion 3", "sQuestion 4", "What cultural lenses were you challenged to look through?"]
   },
   compSci:{
     instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
     student:["sQuestion 1", "sQuestion 2", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   english:{
-    instructor:["iQuestion 1", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
+    instructor:["How diverse was the representation of authors in your course?", "iQuestion 2", "iQuestion 3", "iQuestion 4", "iQuestion 5"],
     student:["How diverse was the represntation of literature in your program?", "How strongly did the literature challenge your world view?", "sQuestion 3", "sQuestion 4", "sQuestion5"]
   },
   engineering:{
@@ -89,8 +89,14 @@ Functions
 */
 function student(){
   console.log("clicked");
-  $("#homeSection").attr("class", "displayNone");
-  $("#questionSection").attr("class", "display");
+  // Here's the code to use if you don't want animations it just toggles the display css
+  // $("#homeSection").attr("class", "displayNone");
+  // $("#questionSection").attr("class", "display");
+  $("#homeSection").attr("class", "animated fadeOut");
+  setTimeout(function(){
+    $("#questionSection").attr("class", "animated fadeIn");
+    $("#homeSection").attr("class", "displayNone");
+  },1000);
   $(".one").text(survey[major][type][0]);
   $(".two").text(survey[major][type][1]);
   $(".three").text(survey[major][type][2]);
@@ -101,8 +107,14 @@ function student(){
 
 function instructor(){
   console.log("clicked");
-  $("#homeSection").attr("class", "displayNone");
-  $("#questionSection").attr("class", "display");
+  // Here's the code to use if you don't want animations it just toggles the display css
+  // $("#homeSection").attr("class", "displayNone");
+  // $("#questionSection").attr("class", "display");
+  $("#homeSection").attr("class", "animated fadeOut");
+  setTimeout(function(){
+    $("#questionSection").attr("class", "animated fadeIn");
+    $("#homeSection").attr("class", "displayNone");
+  },1000);
   $(".one").text(survey[major][type][0]);
   $(".two").text(survey[major][type][1]);
   $(".three").text(survey[major][type][2]);
@@ -112,6 +124,12 @@ function instructor(){
 
 function submitted(event){
   console.log("submitted");
-  $("#questionSection").attr("class", "displayNone");
-  $("#submissionSection").attr("class", "display");
+  //commented code does not use animations
+  // $("#questionSection").attr("class", "displayNone");
+  // $("#submissionSection").attr("class", "display");
+  $("#questionSection").attr("class", "animated fadeOut");
+  setTimeout(function(){
+    $("#submissionSection").attr("class", "animated fadeIn");
+    $("#questionSection").attr("class", "displayNone");
+  },1000);
 }
