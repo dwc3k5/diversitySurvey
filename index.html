@@ -31,11 +31,13 @@
     
   </header>
   <main>
-
+    
+    <div id="content-box">
     <!--Homepage-->
     <div id="home-section" class="">
-      <h1> Hello! You have found the right spot!</h1>
-      <div class="dropdown">
+            <div class="button-box">
+        <h2 class="home-question">What department is this for?</h2>
+        <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Choose Your Major</button>
           <div id="myDropdown" class="dropdown-content">
             <a id="education" class="subject">Education</a>
@@ -44,9 +46,13 @@
             <a id="compSci" class="subject">Computer Science</a>
             <a id="english" class="subject">English</a>
           </div>
+        </div>
+        <div class="button-box">
+          <h2 class="home-question">What is your role at UT?</h2>
+          <button id="student">Student</button>
+          <button id="instructor">Instructor</button>
+        </div>
       </div>
-      <button id="student">Student</button>
-      <button id="instructor">Instructor</button>
     </div>
 
 
@@ -85,7 +91,8 @@
 
     <!--Submission page-->
     <div id="submissionSection" class="displayNone">
-      <h1>THANK YOU!</h1>
+      <h1 id="thanks">THANK YOU!</h1>
+    </div>
     </div>
   </main>
   <footer>

@@ -7,12 +7,20 @@ body{
 }
 button{
   background-image: url("../images/button-background.jpg");
+  margin: 15px 20px 0 0;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
+}
+.home-question{
+  margin: auto;
+  font-family: "Helvetica", Times, serif;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 #navbar{
   font-family: "Times Body Copy", Times, serif;
@@ -40,13 +48,18 @@ button{
 .display{
   display:inline-block;
 }
-#home-section{
+#content-box{
+  padding: 20px 40px 40px 40px;
   margin: auto;
-  background-color: rgba(255,255,255,0.5);
-  height: 350px;
-  width: 500px;
+  background-color: rgba(255,255,255,0.3);
+  width: 650px;
   border-radius: 4px;
   border: 1px solid rgb(200,200,200);
+}
+.button-box{
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 /*stuff for dropdown buttons===================================================*/
@@ -101,8 +114,20 @@ style for questionnaire
 
 }
 
+.question{
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
 /*==============================================================================
 style for post-submission
 ===============================================================================*/
 #submissionSection{
+}
+
+#thanks{
+  margin: auto;
+  color: white;
+  text-shadow: 4px 4px black;
+  font-size: 60px;
 }
